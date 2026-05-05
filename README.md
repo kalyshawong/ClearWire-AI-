@@ -1,7 +1,6 @@
 # ClearWireAI
 
 > **An AI financial copilot for international students.**
-> By 2030, moving money is solved. The agent layer is what's open.
 
 🔗 **[Live Demo](https://clearwire.vercel.app)** &nbsp;·&nbsp; 📄 [Pitch Deck](./ClearWireAI-Pitch-2030.pdf)
 
@@ -9,11 +8,11 @@
 
 ## The problem
 
-International students wait an average of 30 days a year for money to arrive and lose ~$2,000 a year to wire fees and FX spread.
+A typical wire from Hong Kong to a U.S. student takes five days to clear, costs $230 in fees, and hides 2–3% in FX spread. When Dad sends Monday for rent due Friday, the money lands the following Sunday.
 
-The wire is 1970s infrastructure. Dad sends Monday, the money lands Sunday, rent was due Friday. HSBC takes $230 in fees and a 2–3% hidden FX spread on every transfer. While the family waits, scammers target the gap with AI-cloned parent voices and fake tuition invoices.
+Eight transfers a year × $230 in fees + 2–3% in spread = ~$2,000 lost per family.
 
-The wire is the problem — not the people.
+On top of that, scams target the moment students are stressed about money — pig-butchering schemes on Telegram, voice-cloned parents asking for emergency wires, fake tuition invoices from spoofed school domains.
 
 ## The thesis
 
