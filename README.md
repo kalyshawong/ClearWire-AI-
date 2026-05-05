@@ -8,9 +8,7 @@
 
 ## The problem
 
-A typical wire from Hong Kong to a U.S. student takes five days to clear, costs $230 in fees, and hides 2–3% in FX spread. When Dad sends Monday for rent due Friday, the money lands the following Sunday.
-
-Eight transfers a year × $230 in fees + 2–3% in spread = ~$2,000 lost per family.
+A typical wire from Hong Kong to a U.S. student takes five days to clear, costs $230 in fees, and hides 2–3% in FX spread. Eight transfers a year × $230 in fees + 2–3% in spread = ~$2,000 lost per family.
 
 On top of that, scams target the moment students are stressed about money — pig-butchering schemes on Telegram, voice-cloned parents asking for emergency wires, fake tuition invoices from spoofed school domains.
 
@@ -67,7 +65,7 @@ Today is the weekly low →  Convert all of it now
 
 The FX Agent auto-routes per corridor. Each corridor uses a different combination of sovereign and stablecoin infrastructure:
 
-#### 🇨🇳 Mainland China — 4 rails, ~25 seconds
+####  Mainland China — 4 rails, ~25 seconds
 
 ```
 CNY  →  e-CNY  ─────────  AliCNH  →  USDC  →  USD
@@ -84,7 +82,7 @@ CNY  →  e-CNY  ─────────  AliCNH  →  USDC  →  USD
 
 USDC isn't legal in mainland China, so mBridge isn't optional — it's the regulatory plumbing. The actual FX swap happens at the HK leg, where AliCNH (the regulated offshore yuan stablecoin issued by Ant Group) gets converted to USDC at the moment the agent predicts is optimal.
 
-#### 🇭🇰 Hong Kong — 3 rails, ~15 seconds
+####  Hong Kong — 3 rails, ~15 seconds
 
 ```
 HKD  →  digital HKD  →  USDC  →  USD
@@ -94,7 +92,7 @@ HKD  →  digital HKD  →  USDC  →  USD
 
 HK is the bridge city itself — no cross-border ledger needed. HKD is pegged to USD at ~7.80 (HKMA band: 7.75–7.85), so there's barely any rate movement to time. The FX Agent's job here is mostly about speed and low fees, not FX timing.
 
-#### 🇮🇳 India — 3 rails, ~20 seconds
+####  India — 3 rails, ~20 seconds
 
 ```
 INR  →  Singapore via Nexus  →  USDC  →  USD
