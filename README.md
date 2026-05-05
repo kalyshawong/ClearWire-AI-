@@ -22,13 +22,13 @@ What's open is the **agent layer** — the intelligence that decides *when* to c
 
 ## Five agents, one Vault
 
-| Agent | Role |
+| Agent | What it does |
 |---|---|
-| **FX Agent** | The orchestrator. Routes Dad's transfer through optimal rail composition + dynamically times the FX swap. *(Deep dive below.)* |
-| **Bills Agent** | Auto-pays rent, tuition, utilities, subscriptions on schedule from the Vault. Never late because it never hits the last minute. |
-| **Budget Agent** | Tracks variable spending — groceries, ride-share, dining. Quiet category nudges when pacing over. |
-| **Scam Agent** | Intercepts pig-butchering scams, voice-cloned parent calls, and fake tuition invoices *before* money moves. Trained on patterns specific to international students. |
-| **Family Bridge** | Mom funds an Essentials Bucket (4.1% APY) that Bills Agent draws from when the Vault runs low. Mom gets a Sunday summary instead of a phone call every time. |
+| **FX Agent** | Replaces the wire — ~25 seconds, $1.20 per transfer instead of $231 over 5 days. Predicts the rate cycle and converts on the lows. *Deep dive below.* |
+| **Bills Agent** | Auto-pays rent, tuition, utilities, and subscriptions from the Vault on schedule. |
+| **Budget Agent** | Tracks variable spending (groceries, ride-share, eating out) and pings when you're pacing over on a category. |
+| **Scam Agent** | Catches pig-butchering scams on Telegram, voice-cloned parent calls, and fake tuition invoices before money moves. |
+| **Family Bridge** | Parents funds an Essentials Bucket earning 4.1% APY. If the Vault runs low, Bills Agent pulls from it. Parents get a Sunday summary. |
 
 The Vault is a single USD-denominated account earning 4.1% APY, with a debit card linked. Same architecture as Wealthfront Cash.
 
@@ -40,10 +40,10 @@ The centerpiece. The agent that earns its keep.
 
 ### Interaction model
 
-1. **Dad initiates a transfer** in his usual app (WeChat Pay, ICBC Mobile, HSBC, etc.).
+1. **Parent initiates a transfer** in their usual app (WeChat Pay, ICBC Mobile, HSBC, etc.).
 2. **ClearWireAI catches the inbound wire** before it lands — typically 4 hours before settlement, while it's moving through mBridge.
 3. **The FX Agent forecasts the corridor** — reads CNH/USD rate history, current spread vs. mid, the family's bill calendar, and produces a **proposed conversion schedule.**
-4. **Kalysha sees the proposal** with reasoning — *"3-way split over 5 days. 30% today, 50% Wednesday at the predicted weekly low, 20% Friday. Saves ~$18 vs. converting all at once."*
+4. **Customer sees the proposal** with reasoning — *"3-way split over 5 days. 30% today, 50% Wednesday at the predicted weekly low, 20% Friday. Saves ~$18 vs. converting all at once."*
 5. **One-tap approve.** The agent executes the schedule autonomously over the next several days. No further input needed.
 
 ### Dynamic-split logic
@@ -132,7 +132,7 @@ This is the difference between a family stretching and a family covering rent on
 - **Bills Agent** — schedules rent, tuition, utilities, subscriptions for the next 30 days from the Vault. Renders the upcoming bill calendar with rolling balance ("after all payments: $177 remaining; Dad's transfer restocks Vault to $6,377").
 - **Budget Agent** — categorizes variable spending and surfaces nudges. *"You've used 80% of your dining-out budget by the 18th — want me to suggest meal-prep options?"*
 - **Scam Agent** — caught a $4,200 pig-butchering attempt on a recent demo run. Three signals flagged it: known scam wallet, six-week grooming timeline on Telegram, and 23 similar attempts on Asian international students that month. Model trained on this exact pattern.
-- **Family Bridge** — Mom contributes $800 to Kalysha's Essentials Bucket at 4.1% APY. If the Vault runs low, Bills Agent quietly pulls from Mom's bucket. Mom gets a Sunday summary, not a phone call every time. *Contribution, not loan.*
+- **Family Bridge** — Family contributes $800 to customer's Essentials Bucket at 4.1% APY. If the Vault runs low, Bills Agent quietly pulls from Essential's bucket. Parents gets a Sunday summary, not a phone call every time. *Contribution, not loan.*
 
 ## Live demo
 
@@ -143,7 +143,7 @@ The interactive prototype walks through:
 - Proposal card with one-tap approval
 - Three corridor toggles (China / HK / India) — each shows its own dynamic-split shape
 - Bills Agent calendar with rolling Vault balance
-- Family Bridge with Mom's Essentials Bucket
+- Family Bridge with Essentials Bucket
 - Scam Agent intercept
 
 🔗 **[clearwire.vercel.app](https://clearwire.vercel.app)**
