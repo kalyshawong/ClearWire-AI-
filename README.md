@@ -3,7 +3,7 @@
 > **An AI financial copilot for international students.**
 > By 2030, moving money is solved. The agent layer is what's open.
 
-🔗 **[Live Demo](https://clearwireai.vercel.app)** &nbsp;·&nbsp; 📄 [Pitch Deck](./ClearWireAI-Pitch-2030.pdf)
+🔗 **[Live Demo](https://clearwire.vercel.app)** &nbsp;·&nbsp; 📄 [Pitch Deck](./ClearWireAI-Pitch-2030.pdf)
 
 ---
 
@@ -149,7 +149,7 @@ The interactive prototype walks through:
 - Family Bridge with Mom's Essentials Bucket
 - Scam Agent intercept
 
-🔗 **[clearwireai.vercel.app](https://clearwireai.vercel.app)**
+🔗 **[clearwire.vercel.app](https://clearwire.vercel.app)**
 
 ## Screenshots
 
